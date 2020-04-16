@@ -18,11 +18,11 @@ class BizzomateConversationList extends Component<BizzomateConversationListConta
 
     render(): ReactNode {
         const className = classNames('mx-listview bizzomate-conversationList', this.props.class);
-        const emptyMessage = this.props.emptyMessage?.value || "";
+        const emptyMessage = this.props.conversationListEmptyMessage?.value || "";
         const listStyle = this.props.style || {};
 
-        if (this.props.maxHeight) {
-            listStyle.maxHeight = this.props.maxHeight;
+        if (this.props.conversationListMaxHeight) {
+            listStyle.maxHeight = this.props.conversationListMaxHeight;
         }
 
         return (
@@ -31,8 +31,8 @@ class BizzomateConversationList extends Component<BizzomateConversationListConta
                 style={listStyle}>
                 <ul>
                     <ListDataSource
-                        listData={this.props.listDataSource}
-                        listItemContent={this.props.listItemContent}
+                        listData={this.props.conversationListDataSource}
+                        listItemContent={this.props.conversationListItemContent}
                         emptyMessage={emptyMessage}
                     />
                 </ul>

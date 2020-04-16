@@ -11,17 +11,17 @@ export interface BizzomateConversationListContainerProps {
     class: string;
     style?: CSSProperties;
     tabIndex: number;
-    maxHeight?: string;
-    emptyMessage?: DynamicValue<string>;
-    listItemContent: (item: ObjectItem) => ReactNode;
-    listDataSource: ListValue;
+    conversationListMaxHeight?: string;
+    conversationListEmptyMessage?: DynamicValue<string>;
+    conversationListItemContent: (item: ObjectItem) => ReactNode;
+    conversationListDataSource: ListValue;
 }
 
 export interface BizzomateConversationListPreviewProps {
     class: string;
     style: string;
-    maxHeight: string;
-    emptyMessage: string;
-    listItemContent: { widgetCount: number; renderer: Component };
-    listDataSource: {} | null;
+    conversationListMaxHeight: string;
+    conversationListEmptyMessage: string;
+    conversationListItemContent: { widgetCount: number; renderer: Component };
+    conversationListDataSource: {} | null;
 }
