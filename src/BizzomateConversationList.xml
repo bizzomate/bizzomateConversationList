@@ -16,6 +16,10 @@
                     <caption>Empty list message</caption>
                     <description></description>
                 </property>
+                <!--<property key="conversationListMessageStyling" type="boolean" defaultValue="false">
+                    <caption>Message styling</caption>
+                    <description>Style listview items as messages. Add class "left" or "right" to item for placing</description>
+                </property>-->
                 <property key="conversationListItemContent" type="widgets" dataSource="conversationListDataSource">
                     <caption>Content</caption>
                     <description>Widgets using data source</description>

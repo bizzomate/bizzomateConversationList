@@ -6,7 +6,7 @@ declare function require(name: string): string;
 
 export class preview extends Component<BizzomateConversationListPreviewProps> {
     render(): ReactNode {
-        const className = classNames('mx-listview bizzomate-conversationList', this.props.class);
+        const className = classNames('mx-listview bizzomate-conversationList', /*{ 'message-list': this.props.conversationListMessageStyling},*/ this.props.class);
 
         return (
             <div

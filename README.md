@@ -3,6 +3,7 @@ A custom list view meant for displaying a conversation, with focus on latest mes
 
 ## Features
 - Automatically scrolls to last message in listview
+- Uses Mendix listview UI, so can be styled with "listview-stylingless", "listview-striped", etc
 - Easy setup of max-height
 - Custom empty list message
 

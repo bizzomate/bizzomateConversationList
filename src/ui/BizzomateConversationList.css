@@ -2,7 +2,7 @@
 Place your custom CSS here
 */
 .bizzomate-conversationList {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .bizzomate-conversationList-endref {
     float: left;
