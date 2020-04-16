@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="bizzomate.bizzomateconversationlist.BizzomateConversationList" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Bizzomate Conversation List</name>
+    <description>A custom list view meant for displaying a conversation, with focus on latest messages.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="General">
+                <property key="maxHeight" type="string" required="false">
+                    <caption>Max height</caption>
+                    <description>Define the maximum heigt of the list, needs to be a correct css string.</description>
+                </property>
+                <property key="emptyMessage" type="textTemplate" required="false">
+                    <caption>Empty list message</caption>
+                    <description></description>
+                </property>
+                <property key="listItemContent" type="widgets" dataSource="listDataSource">
+                    <caption>Content</caption>
+                    <description>Widgets using data source</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Data source">
+            <propertyGroup caption="Data source">
+                <property key="listDataSource" type="datasource" isList="true">
+                    <caption>Data source</caption>
+                    <description />
+                </property>
+                <!--<property key="listItemClass" type="attribute" required="false" dataSource="listDataSource">
+                    <caption>Class attribute</caption>
+                    <description>Optionally define an attribute that is used as class on the listitems.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                        <attributeType name="Enum"/>
+                    </attributeTypes>
+                </property>-->
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Visibility">
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility"/>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,10 @@
+/*
+Place your custom CSS here
+*/
+.bizzomate-conversationList {
+    overflow-y: scroll;
+}
+.bizzomate-conversationList-endref {
+    float: left;
+    clear: both;
+}
