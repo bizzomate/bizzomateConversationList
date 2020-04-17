@@ -7,13 +7,22 @@ import { ListDataSource } from "./components/ListDataSource";
 import "./ui/BizzomateConversationList.css";
 
 class BizzomateConversationList extends Component<BizzomateConversationListContainerProps> {
+    private messagesEndRef = createRef<HTMLDivElement>();
+    private readonly scrollToBottomAction = this.scrollToBottom.bind(this);
 
+    private scrollToBottom(): void {
+        if (this.messagesEndRef.current && this.props.conversationListDataSource.status == "available"){
+            this.messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        } else {
+            setTimeout(this.scrollToBottomAction, 15);
+        }
+    }
 
     componentDidMount(): void {
-        this.scrollToBottom();
+        setTimeout(this.scrollToBottomAction, 15);
     }
     componentDidUpdate(): void {
-        this.scrollToBottom();
+        setTimeout(this.scrollToBottomAction, 15);
     }
 
     render(): ReactNode {
@@ -24,7 +33,6 @@ class BizzomateConversationList extends Component<BizzomateConversationListConta
         if (this.props.conversationListMaxHeight) {
             listStyle.maxHeight = this.props.conversationListMaxHeight;
         }
-
 
         return (
             <div
@@ -40,13 +48,6 @@ class BizzomateConversationList extends Component<BizzomateConversationListConta
                 <div className="bizzomate-conversationList-endref" ref={this.messagesEndRef} />
             </div>
         );
-    }
-
-    private messagesEndRef = createRef<HTMLDivElement>();
-
-    private scrollToBottom(): void {
-        console.log(this.messagesEndRef)
-        this.messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
 }
 
